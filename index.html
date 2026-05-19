@@ -102,7 +102,7 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 
 /* ===== HOME: SERVICES STRIP ===== */
 .svc-strip{background:var(--bg3)}
-.ss-scroll{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto}
+.ss-scroll{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:0 auto}
 .ss-card{background:#fff;border-radius:var(--radius);padding:32px 24px;transition:all .3s;border:1px solid transparent;cursor:pointer;position:relative;overflow:hidden}
 .ss-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--pri);transform:scaleX(0);transition:transform .3s;transform-origin:left}
 .ss-card:hover::after{transform:scaleX(1)}
@@ -110,13 +110,25 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .ss-ico{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:16px}
 .ss-card:nth-child(1) .ss-ico{background:var(--p-lilac);color:var(--pri)}
 .ss-card:nth-child(2) .ss-ico{background:var(--p-blush);color:#b8953e}
-.ss-card:nth-child(3) .ss-ico{background:var(--p-sage);color:#5a9e5a}
+.ss-card:nth-child(3) .ss-ico{background:var(--p-sage);color:#1a5c2e}
 .ss-card:nth-child(4) .ss-ico{background:var(--p-cream);color:var(--warm)}
 .ss-card:nth-child(5) .ss-ico{background:var(--p-sky);color:#2d8a4e}
 .ss-card:nth-child(6) .ss-ico{background:var(--p-lav);color:var(--pri-light)}
+.ss-card:nth-child(7) .ss-ico{background:var(--p-lilac);color:var(--pri)}
+.ss-card:nth-child(8) .ss-ico{background:var(--p-cream);color:var(--warm)}
+.ss-card:nth-child(9) .ss-ico{background:var(--p-sage);color:#1a5c2e}
+.ss-card:nth-child(10) .ss-ico{background:var(--p-sky);color:#2d8a4e}
+.ss-card:nth-child(11) .ss-ico{background:var(--p-blush);color:#b8953e}
+.ss-card:nth-child(12) .ss-ico{background:var(--p-lav);color:var(--pri-light)}
 .ss-card h3{font-family:'DM Serif Display',serif;font-size:1.05rem;margin-bottom:8px}
 .ss-card p{color:var(--text-dim);font-size:.82rem;line-height:1.65;margin-bottom:12px}
 .ss-card .ss-more{color:var(--pri);font-size:.75rem;font-weight:600;letter-spacing:.5px}
+.enquire-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:#25D366;color:#fff;font-size:.78rem;letter-spacing:.5px;text-decoration:none;border-radius:8px;font-weight:600;font-family:'Inter',sans-serif;transition:all .3s;margin-top:10px;border:none;cursor:pointer}
+.enquire-btn:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 4px 15px rgba(37,211,102,.3)}
+.enquire-btn i{font-size:.85rem}
+.feat-card .enquire-btn{position:absolute;bottom:12px;right:12px;padding:8px 16px;font-size:.72rem;z-index:2;opacity:0;transition:all .3s}
+.feat-card:hover .enquire-btn{opacity:1}
+.svc-enquire{text-align:center;margin-top:25px}
 
 /* ===== HOME: HIGHLIGHT BANNER ===== */
 .highlight{background:linear-gradient(135deg,var(--pri-dark) 0%,var(--pri) 60%,var(--pri-light) 100%);padding:55px 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;text-align:center}
@@ -178,7 +190,7 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .val-box p{color:var(--text-dim);font-size:.8rem;line-height:1.6}
 
 /* ===== SERVICES PAGE ===== */
-.svc-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:20px 5% 0;background:#fff;position:sticky;top:62px;z-index:50;border-bottom:1px solid #ede8f5}
+.svc-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:20px 5% 0;background:#fff;position:sticky;top:85px;z-index:50;border-bottom:1px solid #dde8dd}
 .svc-tab{background:transparent;border:none;padding:11px 18px;font-size:.75rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;transition:all .25s;font-family:'Inter',sans-serif;font-weight:500;color:var(--text-dim);border-bottom:2px solid transparent;margin-bottom:-1px}
 .svc-tab.active,.svc-tab:hover{color:var(--pri);border-bottom-color:var(--pri)}
 .svc-panel{display:none;padding:45px 5%;max-width:1050px;margin:0 auto}
@@ -207,13 +219,13 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .svc-pkgs{background:var(--bg3);border-radius:var(--radius);padding:30px;margin-top:25px}
 .svc-pkgs h3{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:18px;text-align:center}
 .pkg-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
-.pkg-box{background:#fff;border-radius:12px;padding:22px 16px;text-align:center;border:1px solid #ede8f5;transition:all .3s}
+.pkg-box{background:#fff;border-radius:12px;padding:22px 16px;text-align:center;border:1px solid #dde8dd;transition:all .3s}
 .pkg-box:hover{border-color:var(--pri);box-shadow:var(--shadow)}
 .pkg-box h4{font-family:'DM Serif Display',serif;font-size:.95rem;margin-bottom:6px;color:var(--pri-dark)}
 .pkg-box p{font-size:.78rem;color:var(--text-dim);line-height:1.6}
 
 /* ===== GALLERY PAGE ===== */
-.gal-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;padding:22px 5%;background:#fff;position:sticky;top:62px;z-index:50;border-bottom:1px solid #ede8f5}
+.gal-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;padding:22px 5%;background:#fff;position:sticky;top:85px;z-index:50;border-bottom:1px solid #dde8dd}
 .gal-f{background:transparent;border:1.5px solid #ddd8e8;color:var(--text-dim);padding:8px 18px;font-size:.73rem;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;transition:all .25s;font-family:'Inter',sans-serif;border-radius:8px;font-weight:500}
 .gal-f.active,.gal-f:hover{background:var(--pri);color:#fff;border-color:var(--pri)}
 .gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;max-width:1150px;margin:0 auto;padding:28px 5%}
@@ -240,11 +252,11 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .ct-body{max-width:1050px;margin:0 auto;padding:50px 5%}
 .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
 .ct-left h3{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:22px}
-.ct-card{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;padding:16px;border-radius:12px;border:1px solid #ede8f5;transition:all .3s}
+.ct-card{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;padding:16px;border-radius:12px;border:1px solid #dde8dd;transition:all .3s}
 .ct-card:hover{box-shadow:var(--shadow);border-color:var(--pri-light)}
 .ct-ico{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
 .ct-card:nth-child(2) .ct-ico{background:var(--p-lilac);color:var(--pri)}
-.ct-card:nth-child(3) .ct-ico{background:var(--p-sage);color:#5a9e5a}
+.ct-card:nth-child(3) .ct-ico{background:var(--p-sage);color:#1a5c2e}
 .ct-card:nth-child(4) .ct-ico{background:var(--p-sky);color:#2d8a4e}
 .ct-card:nth-child(5) .ct-ico{background:var(--p-blush);color:#b8953e}
 .ct-txt{font-size:.86rem;color:var(--text-dim)}
@@ -345,9 +357,10 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   .highlight{grid-template-columns:1fr 1fr;padding:35px 6%}
   .hl-num{font-size:2rem}
   .hl-lbl{font-size:.65rem}
-  .feat-grid{grid-template-columns:1fr;padding:0 4%}
+  .feat-grid{grid-template-columns:1fr 1fr;padding:0 4%;gap:10px}
   .feat-card{height:220px}
   .feat-label{opacity:1;font-size:.82rem}
+  .feat-card .enquire-btn{opacity:1;position:static;margin-top:0;padding:6px 12px;font-size:.68rem;width:100%;justify-content:center;border-radius:0 0 var(--radius) var(--radius)}
   .gal-grid{grid-template-columns:1fr;padding:15px 4%}
   .gal-card{height:240px;border-radius:12px}
   .gal-filters{gap:5px;padding:14px 3%;top:55px}
@@ -468,11 +481,16 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
       <a href="#" data-page="services" onclick="showPage('services');return false">Services <i class="fas fa-chevron-down" style="font-size:.55rem;margin-left:3px;opacity:.5"></i></a>
       <div class="nav-dd">
         <a href="#" onclick="showPage('services');showSvcTab('weddings');return false"><i class="fas fa-ring"></i>Weddings</a>
+        <a href="#" onclick="showPage('services');showSvcTab('mehandi');return false"><i class="fas fa-hand-sparkles"></i>Mehandi</a>
+        <a href="#" onclick="showPage('services');showSvcTab('sangeeth');return false"><i class="fas fa-music"></i>Sangeeth</a>
+        <a href="#" onclick="showPage('services');showSvcTab('reception');return false"><i class="fas fa-glass-cheers"></i>Reception</a>
         <a href="#" onclick="showPage('services');showSvcTab('birthdays');return false"><i class="fas fa-birthday-cake"></i>Birthdays</a>
         <a href="#" onclick="showPage('services');showSvcTab('corporate');return false"><i class="fas fa-building"></i>Corporate Events</a>
         <a href="#" onclick="showPage('services');showSvcTab('decorations');return false"><i class="fas fa-spa"></i>Decorations</a>
         <a href="#" onclick="showPage('services');showSvcTab('catering');return false"><i class="fas fa-utensils"></i>Catering</a>
         <a href="#" onclick="showPage('services');showSvcTab('photo');return false"><i class="fas fa-camera"></i>Photography</a>
+        <a href="#" onclick="showPage('services');showSvcTab('dj');return false"><i class="fas fa-volume-up"></i>DJ & Sound</a>
+        <a href="#" onclick="showPage('services');showSvcTab('entertainment');return false"><i class="fas fa-theater-masks"></i>Entertainment</a>
       </div>
     </li>
     <li><a href="#" data-page="gallery" onclick="showPage('gallery');return false">Portfolio</a></li>
@@ -490,11 +508,16 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   <a href="#" onclick="showPage('services');toggleMenu();return false">Services</a>
   <div class="mob-sub">
     <a href="#" onclick="showPage('services');showSvcTab('weddings');toggleMenu();return false">Weddings</a>
+    <a href="#" onclick="showPage('services');showSvcTab('mehandi');toggleMenu();return false">Mehandi</a>
+    <a href="#" onclick="showPage('services');showSvcTab('sangeeth');toggleMenu();return false">Sangeeth</a>
+    <a href="#" onclick="showPage('services');showSvcTab('reception');toggleMenu();return false">Reception</a>
     <a href="#" onclick="showPage('services');showSvcTab('birthdays');toggleMenu();return false">Birthdays</a>
     <a href="#" onclick="showPage('services');showSvcTab('corporate');toggleMenu();return false">Corporate</a>
     <a href="#" onclick="showPage('services');showSvcTab('decorations');toggleMenu();return false">Decorations</a>
     <a href="#" onclick="showPage('services');showSvcTab('catering');toggleMenu();return false">Catering</a>
     <a href="#" onclick="showPage('services');showSvcTab('photo');toggleMenu();return false">Photography</a>
+    <a href="#" onclick="showPage('services');showSvcTab('dj');toggleMenu();return false">DJ & Sound</a>
+    <a href="#" onclick="showPage('services');showSvcTab('entertainment');toggleMenu();return false">Entertainment</a>
   </div>
   <a href="#" onclick="showPage('gallery');toggleMenu();return false">Portfolio</a>
   <a href="#" onclick="showPage('contact');toggleMenu();return false">Contact</a>
@@ -557,37 +580,73 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         <div class="ss-ico"><i class="fas fa-ring"></i></div>
         <h3>Wedding Planning</h3>
         <p>Traditional to modern ceremonies with impeccable planning and stunning decor.</p>
-        <span class="ss-more">Explore &rarr;</span>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20Planning%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      </div>
+      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('mehandi')">
+        <div class="ss-ico"><i class="fas fa-hand-sparkles"></i></div>
+        <h3>Mehandi Ceremony</h3>
+        <p>Beautiful mehandi setups with traditional decor, seating, and entertainment.</p>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Mehandi%20Ceremony%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      </div>
+      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('sangeeth')">
+        <div class="ss-ico"><i class="fas fa-music"></i></div>
+        <h3>Sangeeth Night</h3>
+        <p>Electrifying dance floors, DJ, choreography, and vibrant stage setups.</p>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Sangeeth%20Night%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      </div>
+      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('reception')">
+        <div class="ss-ico"><i class="fas fa-glass-cheers"></i></div>
+        <h3>Reception Events</h3>
+        <p>Grand reception setups with elegant stages, lighting, and catering.</p>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Reception%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
       </div>
       <div class="ss-card reveal" onclick="showPage('services');showSvcTab('birthdays')">
         <div class="ss-ico"><i class="fas fa-birthday-cake"></i></div>
         <h3>Birthday Celebrations</h3>
         <p>Creative themes, beautiful setups, and entertainment for all ages.</p>
-        <span class="ss-more">Explore &rarr;</span>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Celebration%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
       </div>
       <div class="ss-card reveal" onclick="showPage('services');showSvcTab('corporate')">
         <div class="ss-ico"><i class="fas fa-building"></i></div>
         <h3>Corporate Events</h3>
         <p>Professional management for conferences, launches, and celebrations.</p>
-        <span class="ss-more">Explore &rarr;</span>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
       </div>
       <div class="ss-card reveal" onclick="showPage('services');showSvcTab('decorations')">
         <div class="ss-ico"><i class="fas fa-spa"></i></div>
         <h3>Event Decorations</h3>
         <p>Exquisite floral, lighting, and thematic designs for any venue.</p>
-        <span class="ss-more">Explore &rarr;</span>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Event%20Decoration%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
       </div>
       <div class="ss-card reveal" onclick="showPage('services');showSvcTab('catering')">
         <div class="ss-ico"><i class="fas fa-utensils"></i></div>
         <h3>Catering Services</h3>
         <p>Multi-cuisine culinary experiences prepared by expert chefs.</p>
-        <span class="ss-more">Explore &rarr;</span>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Catering%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
       </div>
       <div class="ss-card reveal" onclick="showPage('services');showSvcTab('photo')">
         <div class="ss-ico"><i class="fas fa-camera"></i></div>
         <h3>Photography</h3>
         <p>Professional photography and cinematic videography coverage.</p>
-        <span class="ss-more">Explore &rarr;</span>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Photography%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      </div>
+      <div class="ss-card reveal">
+        <div class="ss-ico"><i class="fas fa-volume-up"></i></div>
+        <h3>DJ & Sound</h3>
+        <p>High-quality DJ sound systems, LED walls, and dance floor setups.</p>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20%26%20Sound%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      </div>
+      <div class="ss-card reveal">
+        <div class="ss-ico"><i class="fas fa-school"></i></div>
+        <h3>School Events</h3>
+        <p>Annual day celebrations, sports events, and cultural programs for schools.</p>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20School%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      </div>
+      <div class="ss-card reveal">
+        <div class="ss-ico"><i class="fas fa-om"></i></div>
+        <h3>Festival Events</h3>
+        <p>Vinayaka Chaturthi, Dasara, Dandiya nights, and cultural celebrations.</p>
+        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Festival%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
       </div>
     </div>
   </section>
@@ -608,10 +667,14 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
       <div class="sec-sub">A peek into the celebrations we've crafted</div>
     </div>
     <div class="feat-grid reveal">
-      <div class="feat-card" onclick="showPage('gallery')"><img src="photos/weddings/wedding-mandap-floral.jpg" alt="Floral Mandap" loading="lazy"><div class="feat-label">Floral Mandap Setup</div></div>
-      <div class="feat-card" onclick="showPage('gallery')"><img src="photos/decorations/decor-haldi-yellow.jpg" alt="Haldi Ceremony" loading="lazy"><div class="feat-label">Haldi Ceremony</div></div>
-      <div class="feat-card" onclick="showPage('gallery')"><img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Event" loading="lazy"><div class="feat-label">Corporate Conference</div></div>
-      <div class="feat-card" onclick="showPage('gallery')"><img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Party" loading="lazy"><div class="feat-label">Frozen Theme Party</div></div>
+      <div class="feat-card"><img src="photos/weddings/wedding-mandap-floral.jpg" alt="Floral Mandap" loading="lazy"><div class="feat-label">Floral Mandap Setup</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20services%20like%20the%20Floral%20Mandap" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/decorations/decor-haldi-yellow.jpg" alt="Haldi Ceremony" loading="lazy"><div class="feat-label">Haldi Ceremony</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Haldi%20Ceremony%20decoration" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Event" loading="lazy"><div class="feat-label">Corporate Conference</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Party" loading="lazy"><div class="feat-label">Frozen Theme Party</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Party%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/weddings/wedding-mandap-golden.jpg" alt="Golden Mandap" loading="lazy"><div class="feat-label">Golden Mandap</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20Mandap%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/decorations/decor-pink-arch.jpg" alt="Pink Arch" loading="lazy"><div class="feat-label">Pink Arch Decor</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Decoration%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="LED Stage" loading="lazy"><div class="feat-label">LED Stage & DJ</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20%26%20Sound%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+      <div class="feat-card"><img src="photos/weddings/wedding-bridal-entry.jpg" alt="Bridal Entry" loading="lazy"><div class="feat-label">Bridal Entry Setup</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Bridal%20Entry%20setup" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
     </div>
     <div class="feat-see reveal"><a href="#" class="btn-ghost" onclick="showPage('gallery');return false">View Full Portfolio <i class="fas fa-arrow-right" style="font-size:.7rem"></i></a></div>
   </section>
@@ -710,11 +773,16 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   </div>
   <div class="svc-tabs" id="svcTabs">
     <button class="svc-tab active" data-svc="weddings" onclick="showSvcTab('weddings')">Weddings</button>
+    <button class="svc-tab" data-svc="mehandi" onclick="showSvcTab('mehandi')">Mehandi</button>
+    <button class="svc-tab" data-svc="sangeeth" onclick="showSvcTab('sangeeth')">Sangeeth</button>
+    <button class="svc-tab" data-svc="reception" onclick="showSvcTab('reception')">Reception</button>
     <button class="svc-tab" data-svc="birthdays" onclick="showSvcTab('birthdays')">Birthdays</button>
     <button class="svc-tab" data-svc="corporate" onclick="showSvcTab('corporate')">Corporate</button>
     <button class="svc-tab" data-svc="decorations" onclick="showSvcTab('decorations')">Decorations</button>
     <button class="svc-tab" data-svc="catering" onclick="showSvcTab('catering')">Catering</button>
     <button class="svc-tab" data-svc="photo" onclick="showSvcTab('photo')">Photography</button>
+    <button class="svc-tab" data-svc="dj" onclick="showSvcTab('dj')">DJ & Sound</button>
+    <button class="svc-tab" data-svc="entertainment" onclick="showSvcTab('entertainment')">Entertainment</button>
   </div>
 
   <div class="svc-panel active" id="svc-weddings">
@@ -755,6 +823,64 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         <div class="pkg-box"><h4>Platinum</h4><p>Full luxury with designer decor, entertainment, destination support, and concierge services.</p></div>
       </div>
     </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20Planning%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Weddings</a></div>
+  </div>
+
+  <div class="svc-panel" id="svc-mehandi">
+    <div class="svc-top">
+      <div class="svc-img"><img src="photos/decorations/decor-haldi-marigold.jpg" alt="Mehandi Setup" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-info">
+        <h2>Mehandi Ceremony</h2>
+        <p>Create a vibrant and colourful mehandi event with traditional decor, comfortable seating arrangements, and lively entertainment. We handle everything from setup to music.</p>
+        <div class="svc-checks">
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Traditional Decor & Draping</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Seating Arrangements</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Mehandi Artist Booking</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Music & Entertainment</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Floral Decorations</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Catering & Snacks</div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Mehandi%20Ceremony%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Mehandi</a></div>
+  </div>
+
+  <div class="svc-panel" id="svc-sangeeth">
+    <div class="svc-top">
+      <div class="svc-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Sangeeth Night" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-info">
+        <h2>Sangeeth Night</h2>
+        <p>An electrifying night of music, dance, and celebration! We create the perfect stage for your sangeet with professional choreography, DJ setup, and stunning lighting.</p>
+        <div class="svc-checks">
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Choreography Services</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> DJ & Sound System</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Dance Floor Setup</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> LED Screen Walls</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Stage Lighting</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Live Performances</div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Sangeeth%20Night%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Sangeeth</a></div>
+  </div>
+
+  <div class="svc-panel" id="svc-reception">
+    <div class="svc-top">
+      <div class="svc-img"><img src="photos/weddings/wedding-stage-roses.jpg" alt="Reception Stage" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-info">
+        <h2>Reception Events</h2>
+        <p>Make your reception a grand affair with elegant stage designs, stunning lighting, premium catering, and impeccable guest management. Every detail is planned to perfection.</p>
+        <div class="svc-checks">
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Grand Stage Design</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Lighting & Effects</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Couple Entry Setup</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Guest Management</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Catering Services</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Photography & Video</div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Reception%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Reception</a></div>
   </div>
 
   <div class="svc-panel" id="svc-birthdays">
@@ -791,6 +917,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         <div class="pkg-box"><h4>Mega Bash</h4><p>Luxury party with custom installations, live entertainment, and full management.</p></div>
       </div>
     </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Celebration%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Birthdays</a></div>
   </div>
 
   <div class="svc-panel" id="svc-corporate">
@@ -826,6 +953,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         <div class="pkg-box"><h4>Enterprise</h4><p>Full-scale management for large conferences with live streaming and custom staging.</p></div>
       </div>
     </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Corporate Events</a></div>
   </div>
 
   <div class="svc-panel" id="svc-decorations">
@@ -855,6 +983,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         </div>
       </div>
     </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Event%20Decoration%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Decorations</a></div>
   </div>
 
   <div class="svc-panel" id="svc-catering">
@@ -882,6 +1011,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         </div>
       </div>
     </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Catering%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Catering</a></div>
   </div>
 
   <div class="svc-panel" id="svc-photo">
@@ -911,6 +1041,45 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         </div>
       </div>
     </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Photography%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Photography</a></div>
+  </div>
+
+  <div class="svc-panel" id="svc-dj">
+    <div class="svc-top">
+      <div class="svc-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="DJ & Sound" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-info">
+        <h2>DJ & Sound Services</h2>
+        <p>Take your event to the next level with professional DJ setups, high-quality sound systems, LED screen walls, and dynamic lighting. Perfect for sangeeth nights, receptions, and corporate events.</p>
+        <div class="svc-checks">
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Professional DJ</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> High-End Sound Systems</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> LED Screen Walls</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Dance Floor Setup</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Dynamic Lighting</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Smoke & Fog Effects</div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20%26%20Sound%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for DJ & Sound</a></div>
+  </div>
+
+  <div class="svc-panel" id="svc-entertainment">
+    <div class="svc-top">
+      <div class="svc-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Entertainment" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-info">
+        <h2>Entertainment Services</h2>
+        <p>From professional anchors and choreographers to live bands, dancers, and orchestra — we bring the best entertainment to make your event unforgettable.</p>
+        <div class="svc-checks">
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Professional Anchoring</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Choreography</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Live Singers & Bands</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Dancers & Performers</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Orchestra</div>
+          <div class="svc-chk"><i class="fas fa-check-circle"></i> Special Entry Effects</div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-enquire"><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Entertainment%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now for Entertainment</a></div>
   </div>
 </div>
 
@@ -982,7 +1151,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
           <div class="ct-txt"><strong>Call Us</strong><a href="tel:+918143569207">+91 81435 69207</a></div>
         </div>
         <div class="ct-card">
-          <div class="ct-ico" style="background:var(--p-sage);color:#5a9e5a"><i class="fab fa-whatsapp"></i></div>
+          <div class="ct-ico" style="background:var(--p-sage);color:#1a5c2e"><i class="fab fa-whatsapp"></i></div>
           <div class="ct-txt"><strong>WhatsApp</strong><a href="https://wa.me/918341939277" target="_blank">+91 83419 39277</a></div>
         </div>
         <div class="ct-card">
