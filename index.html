@@ -41,10 +41,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .lead-skip:hover{color:var(--pri)}
 
 /* ===== NAVBAR ===== */
-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(15,35,22,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;transition:box-shadow .3s}
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(15,35,22,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:85px;transition:box-shadow .3s}
 nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-logo-img{height:58px;width:auto;object-fit:contain}
+.nav-logo-img{height:75px;width:auto;object-fit:contain}
 .nav-links{display:flex;gap:0;list-style:none;height:100%;align-items:stretch}
 .nav-links>li{position:relative;display:flex;align-items:center}
 .nav-links>li>a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.8rem;letter-spacing:.5px;font-weight:500;padding:0 15px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .25s}
@@ -60,15 +60,15 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .hamburger span{width:20px;height:2px;background:#c9a84c;transition:all .3s;border-radius:2px}
 
 /* ===== PAGE SYSTEM ===== */
-.page{display:none;min-height:100vh;padding-top:70px}
+.page{display:none;min-height:100vh;padding-top:85px}
 .page.active{display:block}
 #page-home{display:none;flex-direction:column}
 #page-home.active{display:flex}
 
 /* ===== HOME: HERO ===== */
-.hero{min-height:calc(100vh - 70px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:50px 5%;position:relative;overflow:hidden}
+.hero{min-height:calc(100vh - 85px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:50px 5%;position:relative;overflow:hidden}
 .hero-left{position:relative;z-index:1}
-.hero-banner{width:100%;padding:0;margin-top:70px}
+.hero-banner{width:100%;padding:0;margin-top:85px}
 .hero-banner-img{width:100%;height:auto;display:block;object-fit:cover}
 .hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--p-lilac);color:var(--pri-dark);padding:7px 16px;border-radius:20px;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:18px}
 .hero-chip i{font-size:.6rem}
