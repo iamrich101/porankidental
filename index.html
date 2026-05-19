@@ -68,8 +68,8 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 /* ===== HOME: HERO ===== */
 .hero{min-height:calc(100vh - 85px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:50px 5%;position:relative;overflow:hidden}
 .hero-left{position:relative;z-index:1}
-.hero-banner{width:100%;padding:0;margin-top:85px}
-.hero-banner-img{width:100%;height:auto;display:block;object-fit:cover}
+.hero-banner{width:100%;line-height:0;margin-top:-85px;padding-top:85px;background:rgba(15,35,22,.97)}
+.hero-banner-img{width:100%;height:auto;display:block}
 .hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--p-lilac);color:var(--pri-dark);padding:7px 16px;border-radius:20px;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:18px}
 .hero-chip i{font-size:.6rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);color:var(--text);line-height:1.15;margin-bottom:16px}
@@ -304,7 +304,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   .hero-slideshow{display:block;margin-top:20px;padding:0 2%}
   .nav-links{display:none}.nav-book{display:none}.hamburger{display:flex}
   .hero{grid-template-columns:1fr;text-align:center;padding:35px 5%}
-  .hero-banner{margin-top:60px;padding:0}
+  .hero-banner{margin-top:-60px;padding-top:60px}
   .hero-banner-img{width:100%;height:auto;object-fit:contain;min-height:auto}
   .hero-p{margin:0 auto 25px}
   .hero-actions{justify-content:center}
