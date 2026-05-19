@@ -131,15 +131,15 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .svc-enquire{text-align:center;margin-top:25px}
 
 /* ===== ITEM GALLERY ===== */
-.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1200px;margin:0 auto}
+.ig-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:700px;margin:0 auto}
 .ig-card{background:#fff;border-radius:var(--radius);overflow:hidden;transition:all .3s;border:1px solid rgba(26,92,46,.08);cursor:pointer}
 .ig-card:hover{box-shadow:var(--shadow-up);transform:translateY(-5px)}
-.ig-img{height:200px;overflow:hidden;background:var(--bg3)}
+.ig-img{height:280px;overflow:hidden;background:var(--bg3)}
 .ig-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .ig-card:hover .ig-img img{transform:scale(1.06)}
-.ig-info{padding:16px;text-align:center}
-.ig-info h3{font-family:'DM Serif Display',serif;font-size:.95rem;margin-bottom:10px;color:var(--text)}
-.ig-info .enquire-btn{width:100%;justify-content:center;padding:9px 16px;font-size:.74rem}
+.ig-info{padding:18px 20px;text-align:center}
+.ig-info h3{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:12px;color:var(--text)}
+.ig-info .enquire-btn{width:100%;justify-content:center;padding:12px 20px;font-size:.82rem}
 
 /* ===== HOME: HIGHLIGHT BANNER ===== */
 .highlight{background:linear-gradient(135deg,var(--pri-dark) 0%,var(--pri) 60%,var(--pri-light) 100%);padding:55px 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;text-align:center}
@@ -331,7 +331,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   .hero-actions{justify-content:center}
   .hero-trust{justify-content:center}
   .hero-right{display:none}
-  .ig-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .ig-grid{max-width:100%;padding:0 3%}
   .highlight{grid-template-columns:1fr 1fr;gap:25px;padding:45px 8%}
   .ab-row,.ab-row.flip{grid-template-columns:1fr;direction:ltr}
   .svc-top{grid-template-columns:1fr}
@@ -358,11 +358,8 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   .highlight{grid-template-columns:1fr 1fr;padding:35px 6%}
   .hl-num{font-size:2rem}
   .hl-lbl{font-size:.65rem}
-  .ig-grid{grid-template-columns:1fr;gap:16px;padding:0 4%}
+  .ig-grid{max-width:100%;padding:0 4%}
   .ig-img{height:220px}
-  .ig-info{padding:16px}
-  .ig-info h3{font-size:1.05rem;margin-bottom:10px}
-  .ig-info .enquire-btn{padding:11px 18px;font-size:.82rem}
   .feat-label{opacity:1;font-size:.82rem}
   .feat-card .enquire-btn{opacity:1;position:static;margin-top:0;padding:6px 12px;font-size:.68rem;width:100%;justify-content:center;border-radius:0 0 var(--radius) var(--radius)}
   .gal-grid{grid-template-columns:1fr;padding:15px 4%}
@@ -571,26 +568,6 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
     </div>
   </section>
 
-  <!-- Stats Banner -->
-  <section class="highlight" id="home-stats">
-    <div class="hl-item"><div class="hl-num">500+</div><div class="hl-lbl">Events Delivered</div></div>
-    <div class="hl-item"><div class="hl-num">50+</div><div class="hl-lbl">Team Members</div></div>
-    <div class="hl-item"><div class="hl-num">100%</div><div class="hl-lbl">Client Satisfaction</div></div>
-    <div class="hl-item"><div class="hl-num">5+</div><div class="hl-lbl">Years Experience</div></div>
-  </section>
-
-  <!-- Venue Booking -->
-  <section class="sec-pad" style="background:var(--bg2)">
-    <div class="sec-head reveal">
-      <div class="sec-chip">Venue Booking</div>
-      <div class="sec-title">Find the Perfect Venue</div>
-      <div class="sec-sub">We help you find and book the ideal venue for your special occasion</div>
-    </div>
-    <div style="text-align:center" class="reveal">
-      <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20looking%20for%20Venue%20Booking%20assistance.%20Please%20help." class="enquire-btn" target="_blank" style="font-size:.9rem;padding:14px 35px"><i class="fab fa-whatsapp"></i> Enquire Now for Venue Booking</a>
-    </div>
-  </section>
-
   <!-- Item Gallery -->
   <section class="sec-pad item-gallery" id="home-gallery">
     <div class="sec-head reveal">
@@ -684,6 +661,26 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
         <div class="ig-info"><h3>Caterers</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Catering%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
     </div>
+  </section>
+
+  <!-- Venue Booking -->
+  <section class="sec-pad" style="background:var(--bg2)">
+    <div class="sec-head reveal">
+      <div class="sec-chip">Venue Booking</div>
+      <div class="sec-title">Find the Perfect Venue</div>
+      <div class="sec-sub">We help you find and book the ideal venue for your special occasion</div>
+    </div>
+    <div style="text-align:center" class="reveal">
+      <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20looking%20for%20Venue%20Booking%20assistance.%20Please%20help." class="enquire-btn" target="_blank" style="font-size:.9rem;padding:14px 35px"><i class="fab fa-whatsapp"></i> Enquire Now for Venue Booking</a>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="highlight" id="home-stats">
+    <div class="hl-item"><div class="hl-num">500+</div><div class="hl-lbl">Events Delivered</div></div>
+    <div class="hl-item"><div class="hl-num">50+</div><div class="hl-lbl">Team Members</div></div>
+    <div class="hl-item"><div class="hl-num">100%</div><div class="hl-lbl">Client Satisfaction</div></div>
+    <div class="hl-item"><div class="hl-num">5+</div><div class="hl-lbl">Years Experience</div></div>
   </section>
 
   <!-- Reviews -->
