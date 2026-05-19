@@ -130,6 +130,17 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .feat-card:hover .enquire-btn{opacity:1}
 .svc-enquire{text-align:center;margin-top:25px}
 
+/* ===== ITEM GALLERY ===== */
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1200px;margin:0 auto}
+.ig-card{background:#fff;border-radius:var(--radius);overflow:hidden;transition:all .3s;border:1px solid rgba(26,92,46,.08);cursor:pointer}
+.ig-card:hover{box-shadow:var(--shadow-up);transform:translateY(-5px)}
+.ig-img{height:200px;overflow:hidden;background:var(--bg3)}
+.ig-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ig-card:hover .ig-img img{transform:scale(1.06)}
+.ig-info{padding:16px;text-align:center}
+.ig-info h3{font-family:'DM Serif Display',serif;font-size:.95rem;margin-bottom:10px;color:var(--text)}
+.ig-info .enquire-btn{width:100%;justify-content:center;padding:9px 16px;font-size:.74rem}
+
 /* ===== HOME: HIGHLIGHT BANNER ===== */
 .highlight{background:linear-gradient(135deg,var(--pri-dark) 0%,var(--pri) 60%,var(--pri-light) 100%);padding:55px 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;text-align:center}
 .hl-item{color:#fff}
@@ -311,8 +322,6 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:968px){
-  .mobile-reorder{display:flex;flex-direction:column}
-  .mobile-reorder #home-featured{order:-1}
   .hero-slideshow{display:block;margin-top:20px;padding:0 2%}
   .nav-links{display:none}.nav-book{display:none}.hamburger{display:flex}
   .hero{grid-template-columns:1fr;text-align:center;padding:35px 5%}
@@ -322,7 +331,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   .hero-actions{justify-content:center}
   .hero-trust{justify-content:center}
   .hero-right{display:none}
-  .ss-scroll{grid-template-columns:1fr 1fr}
+  .ig-grid{grid-template-columns:repeat(3,1fr);gap:14px}
   .highlight{grid-template-columns:1fr 1fr;gap:25px;padding:45px 8%}
   .ab-row,.ab-row.flip{grid-template-columns:1fr;direction:ltr}
   .svc-top{grid-template-columns:1fr}
@@ -346,19 +355,14 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   .hero-trust{gap:20px;margin-top:5px}
   .hero-trust-num{font-size:1.8rem}
   .hero-trust-lbl{font-size:.62rem}
-  #home-services{order:3}
-  #home-stats{order:2}
-  #home-featured{order:1}
-  .ss-scroll{grid-template-columns:1fr;gap:12px}
-  .ss-card{padding:24px 20px;display:flex;flex-direction:row;align-items:center;gap:16px;text-align:left}
-  .ss-ico{margin-bottom:0;flex-shrink:0}
-  .ss-card h3{font-size:.95rem;margin-bottom:4px}
-  .ss-card p{font-size:.78rem;line-height:1.55;margin-bottom:6px}
   .highlight{grid-template-columns:1fr 1fr;padding:35px 6%}
   .hl-num{font-size:2rem}
   .hl-lbl{font-size:.65rem}
-  .feat-grid{grid-template-columns:1fr 1fr;padding:0 4%;gap:10px}
-  .feat-card{height:220px}
+  .ig-grid{grid-template-columns:1fr 1fr;gap:12px;padding:0 2%}
+  .ig-img{height:150px}
+  .ig-info{padding:12px}
+  .ig-info h3{font-size:.82rem;margin-bottom:8px}
+  .ig-info .enquire-btn{padding:7px 12px;font-size:.68rem}
   .feat-label{opacity:1;font-size:.82rem}
   .feat-card .enquire-btn{opacity:1;position:static;margin-top:0;padding:6px 12px;font-size:.68rem;width:100%;justify-content:center;border-radius:0 0 var(--radius) var(--radius)}
   .gal-grid{grid-template-columns:1fr;padding:15px 4%}
@@ -567,90 +571,6 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
     </div>
   </section>
 
-  <div class="mobile-reorder">
-  <!-- Services Strip -->
-  <section class="svc-strip sec-pad" id="home-services">
-    <div class="sec-head reveal">
-      <div class="sec-chip">What We Offer</div>
-      <div class="sec-title">Our Expertise</div>
-      <div class="sec-sub">Comprehensive event solutions tailored to make your celebration unforgettable</div>
-    </div>
-    <div class="ss-scroll">
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('weddings')">
-        <div class="ss-ico"><i class="fas fa-ring"></i></div>
-        <h3>Wedding Planning</h3>
-        <p>Traditional to modern ceremonies with impeccable planning and stunning decor.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20Planning%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('mehandi')">
-        <div class="ss-ico"><i class="fas fa-hand-sparkles"></i></div>
-        <h3>Mehandi Ceremony</h3>
-        <p>Beautiful mehandi setups with traditional decor, seating, and entertainment.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Mehandi%20Ceremony%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('sangeeth')">
-        <div class="ss-ico"><i class="fas fa-music"></i></div>
-        <h3>Sangeeth Night</h3>
-        <p>Electrifying dance floors, DJ, choreography, and vibrant stage setups.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Sangeeth%20Night%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('reception')">
-        <div class="ss-ico"><i class="fas fa-glass-cheers"></i></div>
-        <h3>Reception Events</h3>
-        <p>Grand reception setups with elegant stages, lighting, and catering.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Reception%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('birthdays')">
-        <div class="ss-ico"><i class="fas fa-birthday-cake"></i></div>
-        <h3>Birthday Celebrations</h3>
-        <p>Creative themes, beautiful setups, and entertainment for all ages.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Celebration%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('corporate')">
-        <div class="ss-ico"><i class="fas fa-building"></i></div>
-        <h3>Corporate Events</h3>
-        <p>Professional management for conferences, launches, and celebrations.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('decorations')">
-        <div class="ss-ico"><i class="fas fa-spa"></i></div>
-        <h3>Event Decorations</h3>
-        <p>Exquisite floral, lighting, and thematic designs for any venue.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Event%20Decoration%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('catering')">
-        <div class="ss-ico"><i class="fas fa-utensils"></i></div>
-        <h3>Catering Services</h3>
-        <p>Multi-cuisine culinary experiences prepared by expert chefs.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Catering%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal" onclick="showPage('services');showSvcTab('photo')">
-        <div class="ss-ico"><i class="fas fa-camera"></i></div>
-        <h3>Photography</h3>
-        <p>Professional photography and cinematic videography coverage.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Photography%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal">
-        <div class="ss-ico"><i class="fas fa-volume-up"></i></div>
-        <h3>DJ & Sound</h3>
-        <p>High-quality DJ sound systems, LED walls, and dance floor setups.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20%26%20Sound%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal">
-        <div class="ss-ico"><i class="fas fa-school"></i></div>
-        <h3>School Events</h3>
-        <p>Annual day celebrations, sports events, and cultural programs for schools.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20School%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-      <div class="ss-card reveal">
-        <div class="ss-ico"><i class="fas fa-om"></i></div>
-        <h3>Festival Events</h3>
-        <p>Vinayaka Chaturthi, Dasara, Dandiya nights, and cultural celebrations.</p>
-        <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Festival%20Event%20services" class="enquire-btn" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Enquire Now</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Stats Banner -->
   <section class="highlight" id="home-stats">
     <div class="hl-item"><div class="hl-num">500+</div><div class="hl-lbl">Events Delivered</div></div>
@@ -659,26 +579,112 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
     <div class="hl-item"><div class="hl-num">5+</div><div class="hl-lbl">Years Experience</div></div>
   </section>
 
-  <!-- Featured Work -->
-  <section class="featured sec-pad" id="home-featured">
+  <!-- Venue Booking -->
+  <section class="sec-pad" style="background:var(--bg2)">
     <div class="sec-head reveal">
-      <div class="sec-chip">Our Portfolio</div>
-      <div class="sec-title">Recent Work</div>
-      <div class="sec-sub">A peek into the celebrations we've crafted</div>
+      <div class="sec-chip">Venue Booking</div>
+      <div class="sec-title">Find the Perfect Venue</div>
+      <div class="sec-sub">We help you find and book the ideal venue for your special occasion</div>
     </div>
-    <div class="feat-grid reveal">
-      <div class="feat-card"><img src="photos/weddings/wedding-mandap-floral.jpg" alt="Floral Mandap" loading="lazy"><div class="feat-label">Floral Mandap Setup</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20services%20like%20the%20Floral%20Mandap" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/decorations/decor-haldi-yellow.jpg" alt="Haldi Ceremony" loading="lazy"><div class="feat-label">Haldi Ceremony</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Haldi%20Ceremony%20decoration" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Event" loading="lazy"><div class="feat-label">Corporate Conference</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Party" loading="lazy"><div class="feat-label">Frozen Theme Party</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Party%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/weddings/wedding-mandap-golden.jpg" alt="Golden Mandap" loading="lazy"><div class="feat-label">Golden Mandap</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20Mandap%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/decorations/decor-pink-arch.jpg" alt="Pink Arch" loading="lazy"><div class="feat-label">Pink Arch Decor</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Decoration%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="LED Stage" loading="lazy"><div class="feat-label">LED Stage & DJ</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20%26%20Sound%20services" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
-      <div class="feat-card"><img src="photos/weddings/wedding-bridal-entry.jpg" alt="Bridal Entry" loading="lazy"><div class="feat-label">Bridal Entry Setup</div><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Bridal%20Entry%20setup" class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire</a></div>
+    <div style="text-align:center" class="reveal">
+      <a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20looking%20for%20Venue%20Booking%20assistance.%20Please%20help." class="enquire-btn" target="_blank" style="font-size:.9rem;padding:14px 35px"><i class="fab fa-whatsapp"></i> Enquire Now for Venue Booking</a>
     </div>
-    <div class="feat-see reveal"><a href="#" class="btn-ghost" onclick="showPage('gallery');return false">View Full Portfolio <i class="fas fa-arrow-right" style="font-size:.7rem"></i></a></div>
   </section>
-  </div>
+
+  <!-- Item Gallery -->
+  <section class="sec-pad item-gallery" id="home-gallery">
+    <div class="sec-head reveal">
+      <div class="sec-chip">Item Gallery</div>
+      <div class="sec-title">Our Services & Portfolio</div>
+      <div class="sec-sub">Everything you need for your perfect event, all under one roof</div>
+    </div>
+    <div class="ig-grid reveal">
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/weddings/wedding-mandap-golden.jpg" alt="Wedding" loading="lazy"></div>
+        <div class="ig-info"><h3>Wedding</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/decorations/decor-haldi-marigold.jpg" alt="Mehandi" loading="lazy"></div>
+        <div class="ig-info"><h3>Mehandi</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Mehandi%20Ceremony%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Sangeeth" loading="lazy"></div>
+        <div class="ig-info"><h3>Sangeeth</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Sangeeth%20Night%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/weddings/wedding-stage-roses.jpg" alt="Reception" loading="lazy"></div>
+        <div class="ig-info"><h3>Reception</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Reception%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/decorations/decor-gold-arch.jpg" alt="Dhoti Saree Ceremony" loading="lazy"></div>
+        <div class="ig-info"><h3>Dhoti / Saree Ceremony</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dhoti%20%2F%20Saree%20Ceremony%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Events" loading="lazy"></div>
+        <div class="ig-info"><h3>Corporate Events</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Decoration" loading="lazy"></div>
+        <div class="ig-info"><h3>Birthday Decoration</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Decoration%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/corporate/corporate-aosmith.jpg" alt="School Events" loading="lazy"></div>
+        <div class="ig-info"><h3>School Events</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20School%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/corporate/corporate-banquet.jpg" alt="Business Events" loading="lazy"></div>
+        <div class="ig-info"><h3>Business & Office Events</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Business%20%26%20Office%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/decorations/decor-green-floral.jpg" alt="Vinayaka Chaturthi Dasara" loading="lazy"></div>
+        <div class="ig-info"><h3>Vinayaka Chaturthi & Dasara</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Festival%20Event%20services%20(Vinayaka%20Chaturthi%20%2F%20Dasara).%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Dandiya Kolatam" loading="lazy"></div>
+        <div class="ig-info"><h3>Dandiya & Kolatam Dance</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dandiya%20%26%20Kolatam%20Dance%20event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="DJ Sound" loading="lazy"></div>
+        <div class="ig-info"><h3>DJ Sound</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20Sound%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="LED Screen Walls" loading="lazy"></div>
+        <div class="ig-info"><h3>LED Screen Walls</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20LED%20Screen%20Wall%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Dance Floor" loading="lazy"></div>
+        <div class="ig-info"><h3>Dance Floor</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dance%20Floor%20setup%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/corporate/corporate-sobha.jpg" alt="Anchoring" loading="lazy"></div>
+        <div class="ig-info"><h3>Anchoring</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Anchoring%20%2F%20Hosting%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Choreographer" loading="lazy"></div>
+        <div class="ig-info"><h3>Choreographer</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Choreography%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/weddings/wedding-couple-rainbow.jpg" alt="Photography" loading="lazy"></div>
+        <div class="ig-info"><h3>Photography</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Photography%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/weddings/wedding-bride-sparklers.jpg" alt="Special Entries" loading="lazy"></div>
+        <div class="ig-info"><h3>Special Entries & Effects</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Special%20Entry%20%26%20Effects%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/weddings/wedding-bride-performers.jpg" alt="Dancers Singers" loading="lazy"></div>
+        <div class="ig-info"><h3>Dancers & Singers</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dancers%20%26%20Singers%20for%20my%20event.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Orchestra Band" loading="lazy"></div>
+        <div class="ig-info"><h3>Orchestra & Band</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Orchestra%20%26%20Band%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-img"><img src="photos/corporate/corporate-banquet.jpg" alt="Caterers" loading="lazy"></div>
+        <div class="ig-info"><h3>Caterers</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Catering%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Reviews -->
   <section class="reviews sec-pad">
@@ -689,21 +695,21 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
     <div class="rev-box reveal">
       <div class="rev-item active">
         <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="rev-q">"Krishna Events made our wedding absolutely magical. Every detail was perfect, from the floral arrangements to the lighting. We couldn't have asked for a better team!"</p>
-        <div class="rev-who">Priya & Rahul</div>
-        <div class="rev-when">Wedding, 2025</div>
+        <p class="rev-q">"Absolutely stunning decorations by Krishna Events! The colors, lighting, and floral arrangements were perfect. Our guests couldn't stop praising the ambiance. We will definitely book them again!"</p>
+        <div class="rev-who">U Lakshmi</div>
+        <div class="rev-when">Event Decoration</div>
       </div>
       <div class="rev-item">
         <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="rev-q">"The corporate event they organized for us was flawless. Professional, creative, and executed with perfection. Our stakeholders were truly impressed!"</p>
-        <div class="rev-who">Vikram Sharma</div>
-        <div class="rev-when">Corporate Event, 2026</div>
+        <p class="rev-q">"Krishna Events gave our birthday celebration a grand look with their unique and stylish decor. They exceeded our expectations and made the event truly memorable!"</p>
+        <div class="rev-who">Jhansi</div>
+        <div class="rev-when">Birthday Celebration</div>
       </div>
       <div class="rev-item">
         <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="rev-q">"My daughter's birthday party was beyond our wildest expectations. The decorations were absolutely stunning and the team made us feel so special!"</p>
-        <div class="rev-who">Anita Reddy</div>
-        <div class="rev-when">Birthday Party, 2026</div>
+        <p class="rev-q">"If you're looking for top-notch event decoration, Krishna Events is the best choice. They beautifully decorated our engagement function, making it elegant and classy!"</p>
+        <div class="rev-who">Mehar Sai Ram</div>
+        <div class="rev-when">Engagement Decoration</div>
       </div>
       <div class="rev-dots">
         <button class="rev-dot active" onclick="showRev(0)"></button>
