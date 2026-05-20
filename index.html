@@ -134,8 +134,10 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .ig-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:700px;margin:0 auto}
 .ig-card{background:#fff;border-radius:var(--radius);overflow:hidden;transition:all .3s;border:1px solid rgba(26,92,46,.08);cursor:pointer}
 .ig-card:hover{box-shadow:var(--shadow-up);transform:translateY(-5px)}
-.ig-img{height:280px;overflow:hidden;background:var(--bg3)}
-.ig-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ig-img{height:280px;overflow:hidden;background:var(--bg3);position:relative}
+.ig-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--bg3) 25%,#e8e8e0 50%,var(--bg3) 75%);background-size:200% 100%;animation:igShimmer 1.5s infinite}
+@keyframes igShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.ig-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s;position:relative;z-index:1}
 .ig-card:hover .ig-img img{transform:scale(1.06)}
 .ig-info{padding:18px 20px;text-align:center}
 .ig-info h3{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:12px;color:var(--text)}
@@ -542,13 +544,13 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
       <div class="hero-slideshow">
         <div class="hero-slides">
           <img src="photos/weddings/wedding-mandap-golden.jpg" alt="Wedding Mandap" class="hero-slide active">
-          <img src="photos/decorations/decor-pink-arch.jpg" alt="Pink Arch Decor" class="hero-slide">
-          <img src="photos/weddings/wedding-couple-smoke.jpg" alt="Wedding Couple" class="hero-slide">
-          <img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Party" class="hero-slide">
-          <img src="photos/decorations/decor-haldi-yellow.jpg" alt="Haldi Ceremony" class="hero-slide">
-          <img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Event" class="hero-slide">
-          <img src="photos/weddings/wedding-stage-roses.jpg" alt="Rose Stage" class="hero-slide">
-          <img src="photos/decorations/decor-gold-arch.jpg" alt="Gold Arch" class="hero-slide">
+          <img src="photos/decorations/decor-pink-arch.jpg" alt="Pink Arch Decor" class="hero-slide" loading="lazy">
+          <img src="photos/weddings/wedding-couple-smoke.jpg" alt="Wedding Couple" class="hero-slide" loading="lazy">
+          <img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Party" class="hero-slide" loading="lazy">
+          <img src="photos/decorations/decor-haldi-yellow.jpg" alt="Haldi Ceremony" class="hero-slide" loading="lazy">
+          <img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Event" class="hero-slide" loading="lazy">
+          <img src="photos/weddings/wedding-stage-roses.jpg" alt="Rose Stage" class="hero-slide" loading="lazy">
+          <img src="photos/decorations/decor-gold-arch.jpg" alt="Gold Arch" class="hero-slide" loading="lazy">
         </div>
         <div class="hero-slide-dots"></div>
       </div>
@@ -561,9 +563,9 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
     <div class="hero-right">
       <div class="hero-blob"></div>
       <div class="hero-collage">
-        <div class="hero-collage-img"><img src="photos/weddings/wedding-mandap-golden.jpg" alt="Wedding"></div>
-        <div class="hero-collage-img"><img src="photos/decorations/decor-pink-arch.jpg" alt="Decor"></div>
-        <div class="hero-collage-img"><img src="photos/weddings/wedding-couple-smoke.jpg" alt="Celebration"></div>
+        <div class="hero-collage-img"><img src="photos/weddings/wedding-mandap-golden.jpg" alt="Wedding" loading="lazy"></div>
+        <div class="hero-collage-img"><img src="photos/decorations/decor-pink-arch.jpg" alt="Decor" loading="lazy"></div>
+        <div class="hero-collage-img"><img src="photos/weddings/wedding-couple-smoke.jpg" alt="Celebration" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -577,87 +579,87 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
     </div>
     <div class="ig-grid reveal">
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/weddings/wedding-mandap-golden.jpg" alt="Wedding" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/weddings/wedding-mandap-golden.jpg" alt="Wedding" loading="lazy"></div>
         <div class="ig-info"><h3>Wedding</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Wedding%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/decorations/decor-haldi-marigold.jpg" alt="Mehandi" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/decorations/decor-haldi-marigold.jpg" alt="Mehandi" loading="lazy"></div>
         <div class="ig-info"><h3>Mehandi</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Mehandi%20Ceremony%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Sangeeth" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-dance.jpg" alt="Sangeeth" loading="lazy"></div>
         <div class="ig-info"><h3>Sangeeth</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Sangeeth%20Night%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/weddings/wedding-stage-roses.jpg" alt="Reception" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/weddings/wedding-stage-roses.jpg" alt="Reception" loading="lazy"></div>
         <div class="ig-info"><h3>Reception</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Reception%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/decorations/decor-gold-arch.jpg" alt="Dhoti Saree Ceremony" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/decorations/decor-gold-arch.jpg" alt="Dhoti Saree Ceremony" loading="lazy"></div>
         <div class="ig-info"><h3>Dhoti / Saree Ceremony</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dhoti%20%2F%20Saree%20Ceremony%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Events" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/corporate/corporate-cognizant.jpg" alt="Corporate Events" loading="lazy"></div>
         <div class="ig-info"><h3>Corporate Events</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Decoration" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/birthdays/birthday-frozen.jpg" alt="Birthday Decoration" loading="lazy"></div>
         <div class="ig-info"><h3>Birthday Decoration</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Birthday%20Decoration%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/corporate/corporate-aosmith.jpg" alt="School Events" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/corporate/corporate-aosmith.jpg" alt="School Events" loading="lazy"></div>
         <div class="ig-info"><h3>School Events</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20School%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/corporate/corporate-banquet.jpg" alt="Business Events" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/corporate/corporate-banquet.jpg" alt="Business Events" loading="lazy"></div>
         <div class="ig-info"><h3>Business & Office Events</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Business%20%26%20Office%20Event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/decorations/decor-green-floral.jpg" alt="Vinayaka Chaturthi Dasara" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/decorations/decor-green-floral.jpg" alt="Vinayaka Chaturthi Dasara" loading="lazy"></div>
         <div class="ig-info"><h3>Vinayaka Chaturthi & Dasara</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Festival%20Event%20services%20(Vinayaka%20Chaturthi%20%2F%20Dasara).%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Dandiya Kolatam" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-concert.jpg" alt="Dandiya Kolatam" loading="lazy"></div>
         <div class="ig-info"><h3>Dandiya & Kolatam Dance</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dandiya%20%26%20Kolatam%20Dance%20event%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="DJ Sound" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-led-stage.jpg" alt="DJ Sound" loading="lazy"></div>
         <div class="ig-info"><h3>DJ Sound</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20DJ%20Sound%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="LED Screen Walls" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-led-stage.jpg" alt="LED Screen Walls" loading="lazy"></div>
         <div class="ig-info"><h3>LED Screen Walls</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20LED%20Screen%20Wall%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Dance Floor" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-dance.jpg" alt="Dance Floor" loading="lazy"></div>
         <div class="ig-info"><h3>Dance Floor</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dance%20Floor%20setup%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/corporate/corporate-sobha.jpg" alt="Anchoring" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/corporate/corporate-sobha.jpg" alt="Anchoring" loading="lazy"></div>
         <div class="ig-info"><h3>Anchoring</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Anchoring%20%2F%20Hosting%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Choreographer" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-dance.jpg" alt="Choreographer" loading="lazy"></div>
         <div class="ig-info"><h3>Choreographer</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Choreography%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/weddings/wedding-couple-rainbow.jpg" alt="Photography" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/weddings/wedding-couple-rainbow.jpg" alt="Photography" loading="lazy"></div>
         <div class="ig-info"><h3>Photography</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Photography%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/weddings/wedding-bride-sparklers.jpg" alt="Special Entries" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/weddings/wedding-bride-sparklers.jpg" alt="Special Entries" loading="lazy"></div>
         <div class="ig-info"><h3>Special Entries & Effects</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Special%20Entry%20%26%20Effects%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/weddings/wedding-bride-performers.jpg" alt="Dancers Singers" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/weddings/wedding-bride-performers.jpg" alt="Dancers Singers" loading="lazy"></div>
         <div class="ig-info"><h3>Dancers & Singers</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Dancers%20%26%20Singers%20for%20my%20event.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Orchestra Band" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/entertainment/entertainment-concert.jpg" alt="Orchestra Band" loading="lazy"></div>
         <div class="ig-info"><h3>Orchestra & Band</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Orchestra%20%26%20Band%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
       <div class="ig-card">
-        <div class="ig-img"><img src="photos/corporate/corporate-banquet.jpg" alt="Caterers" loading="lazy"></div>
+        <div class="ig-img"><img decoding="async" src="photos/corporate/corporate-banquet.jpg" alt="Caterers" loading="lazy"></div>
         <div class="ig-info"><h3>Caterers</h3><a href="https://wa.me/918341939277?text=Hi%2C%20I%27m%20interested%20in%20Catering%20services.%20Please%20share%20details." class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a></div>
       </div>
     </div>
@@ -831,7 +833,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 
   <div class="svc-panel" id="svc-mehandi">
     <div class="svc-top">
-      <div class="svc-img"><img src="photos/decorations/decor-haldi-marigold.jpg" alt="Mehandi Setup" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-img"><img src="photos/decorations/decor-haldi-marigold.jpg" alt="Mehandi Setup" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
       <div class="svc-info">
         <h2>Mehandi Ceremony</h2>
         <p>Create a vibrant and colourful mehandi event with traditional decor, comfortable seating arrangements, and lively entertainment. We handle everything from setup to music.</p>
@@ -850,7 +852,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 
   <div class="svc-panel" id="svc-sangeeth">
     <div class="svc-top">
-      <div class="svc-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Sangeeth Night" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-img"><img src="photos/entertainment/entertainment-dance.jpg" alt="Sangeeth Night" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
       <div class="svc-info">
         <h2>Sangeeth Night</h2>
         <p>An electrifying night of music, dance, and celebration! We create the perfect stage for your sangeet with professional choreography, DJ setup, and stunning lighting.</p>
@@ -869,7 +871,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 
   <div class="svc-panel" id="svc-reception">
     <div class="svc-top">
-      <div class="svc-img"><img src="photos/weddings/wedding-stage-roses.jpg" alt="Reception Stage" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-img"><img src="photos/weddings/wedding-stage-roses.jpg" alt="Reception Stage" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
       <div class="svc-info">
         <h2>Reception Events</h2>
         <p>Make your reception a grand affair with elegant stage designs, stunning lighting, premium catering, and impeccable guest management. Every detail is planned to perfection.</p>
@@ -1049,7 +1051,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 
   <div class="svc-panel" id="svc-dj">
     <div class="svc-top">
-      <div class="svc-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="DJ & Sound" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-img"><img src="photos/entertainment/entertainment-led-stage.jpg" alt="DJ & Sound" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
       <div class="svc-info">
         <h2>DJ & Sound Services</h2>
         <p>Take your event to the next level with professional DJ setups, high-quality sound systems, LED screen walls, and dynamic lighting. Perfect for sangeeth nights, receptions, and corporate events.</p>
@@ -1068,7 +1070,7 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 
   <div class="svc-panel" id="svc-entertainment">
     <div class="svc-top">
-      <div class="svc-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Entertainment" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="svc-img"><img src="photos/entertainment/entertainment-concert.jpg" alt="Entertainment" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
       <div class="svc-info">
         <h2>Entertainment Services</h2>
         <p>From professional anchors and choreographers to live bands, dancers, and orchestra — we bring the best entertainment to make your event unforgettable.</p>
