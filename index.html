@@ -68,8 +68,12 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 /* ===== HOME: HERO ===== */
 .hero{min-height:calc(100vh - 85px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:50px 5%;position:relative;overflow:hidden}
 .hero-left{position:relative;z-index:1}
-.hero-banner{width:100%;line-height:0;margin-top:-150px;padding-top:150px;background:rgba(15,35,22,.97)}
-.hero-banner-img{width:100%;height:auto;display:block}
+.hero-banner{width:100%;line-height:0;margin-top:-150px;padding-top:150px;background:rgba(15,35,22,.97);position:relative;overflow:hidden}
+.hero-banner-track{display:flex;width:200%;transition:transform .8s ease}
+.hero-banner-img{width:50%;height:auto;display:block;flex-shrink:0}
+.hero-banner-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.hero-banner-dots span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .3s}
+.hero-banner-dots span.active{background:#c9a84c}
 .hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--p-lilac);color:var(--pri-dark);padding:7px 16px;border-radius:20px;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:18px}
 .hero-chip i{font-size:.6rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);color:var(--text);line-height:1.15;margin-bottom:16px}
@@ -530,8 +534,12 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 <!-- ========== HOME ========== -->
 <div class="page active" id="page-home">
 
-  <div class="hero-banner">
-    <img src="photos/ke-banner.jpeg" alt="Krishna Events Official Banner" class="hero-banner-img">
+  <div class="hero-banner" id="heroBanner">
+    <div class="hero-banner-track" id="bannerTrack">
+      <img src="photos/ke-banner.jpeg" alt="Krishna Events Official Banner" class="hero-banner-img">
+      <img src="photos/ke-banner-2.jpeg" alt="Krishna Events Official Banner 2" class="hero-banner-img">
+    </div>
+    <div class="hero-banner-dots" id="bannerDots"><span class="active" onclick="slideBanner(0)"></span><span onclick="slideBanner(1)"></span></div>
   </div>
   <section class="hero">
     <div class="hero-left">
@@ -1223,6 +1231,13 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
 </footer>
 
 <script>
+// HERO BANNER CAROUSEL
+let bannerIdx=0,bannerTimer;
+function slideBanner(i){bannerIdx=i;document.getElementById('bannerTrack').style.transform='translateX(-'+(i*50)+'%)';document.querySelectorAll('#bannerDots span').forEach((d,j)=>d.classList.toggle('active',j===i))}
+bannerTimer=setInterval(()=>{slideBanner((bannerIdx+1)%2)},4000);
+document.getElementById('heroBanner').addEventListener('mouseenter',()=>clearInterval(bannerTimer));
+document.getElementById('heroBanner').addEventListener('mouseleave',()=>{bannerTimer=setInterval(()=>{slideBanner((bannerIdx+1)%2)},4000)});
+
 // SLIDESHOW INIT & CONTROL
 document.querySelectorAll('[data-slideshow]').forEach(ss=>{
   const slides=ss.querySelectorAll('.svc-slide');
