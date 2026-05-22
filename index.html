@@ -164,18 +164,20 @@ nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.25)}
 .feat-see{text-align:center;margin-top:30px}
 
 /* ===== HOME: TESTIMONIALS ===== */
-.reviews{background:var(--bg3)}
-.rev-box{max-width:650px;margin:0 auto;text-align:center}
+.reviews{background:linear-gradient(135deg,#0f2316 0%,#1a3a25 50%,#0f2316 100%);padding:70px 5%}
+.reviews .sec-chip{background:rgba(201,168,76,.15);color:#c9a84c}
+.reviews .sec-title{color:#fff}
+.rev-box{max-width:700px;margin:0 auto;text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:20px;padding:40px 35px;backdrop-filter:blur(8px)}
 .rev-item{display:none}
-.rev-item.active{display:block;animation:revIn .4s ease}
-@keyframes revIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
-.rev-stars{color:var(--warm);font-size:.9rem;letter-spacing:2px;margin-bottom:14px}
-.rev-q{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--text);line-height:1.85;margin-bottom:18px}
-.rev-who{font-weight:600;font-size:.88rem}
-.rev-when{color:var(--text-dim);font-size:.78rem;margin-top:3px}
-.rev-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
-.rev-dot{width:9px;height:9px;border-radius:50%;border:2px solid var(--pri);background:transparent;cursor:pointer;transition:all .25s;padding:0}
-.rev-dot.active{background:var(--pri);transform:scale(1.15)}
+.rev-item.active{display:block;animation:revIn .5s ease}
+@keyframes revIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.rev-stars{color:#c9a84c;font-size:1.05rem;letter-spacing:3px;margin-bottom:16px}
+.rev-q{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:rgba(255,255,255,.9);line-height:1.85;margin-bottom:20px}
+.rev-who{font-weight:700;font-size:.95rem;color:#c9a84c;letter-spacing:.5px}
+.rev-when{color:rgba(255,255,255,.5);font-size:.78rem;margin-top:5px}
+.rev-dots{display:flex;justify-content:center;gap:10px;margin-top:25px}
+.rev-dot{width:10px;height:10px;border-radius:50%;border:2px solid #c9a84c;background:transparent;cursor:pointer;transition:all .25s;padding:0}
+.rev-dot.active{background:#c9a84c;transform:scale(1.2);box-shadow:0 0 8px rgba(201,168,76,.4)}
 
 /* ===== HOME: CTA ===== */
 .cta-block{text-align:center;padding:65px 5%;background:var(--p-lilac);position:relative}
@@ -698,25 +700,25 @@ footer{background:var(--text);color:#fff;padding:50px 5% calc(25px + env(safe-ar
   <section class="reviews sec-pad">
     <div class="sec-head reveal">
       <div class="sec-chip">Client Love</div>
-      <div class="sec-title">What People Say</div>
+      <div class="sec-title">Client Reviews</div>
     </div>
     <div class="rev-box reveal">
       <div class="rev-item active">
         <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <p class="rev-q">"Absolutely stunning decorations by Krishna Events! The colors, lighting, and floral arrangements were perfect. Our guests couldn't stop praising the ambiance. We will definitely book them again!"</p>
-        <div class="rev-who">U Lakshmi</div>
+        <div class="rev-who">Lakshmi</div>
         <div class="rev-when">Event Decoration</div>
       </div>
       <div class="rev-item">
         <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <p class="rev-q">"Krishna Events gave our birthday celebration a grand look with their unique and stylish decor. They exceeded our expectations and made the event truly memorable!"</p>
-        <div class="rev-who">Jhansi</div>
+        <div class="rev-who">V. Bhavya Choudary</div>
         <div class="rev-when">Birthday Celebration</div>
       </div>
       <div class="rev-item">
         <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <p class="rev-q">"If you're looking for top-notch event decoration, Krishna Events is the best choice. They beautifully decorated our engagement function, making it elegant and classy!"</p>
-        <div class="rev-who">Mehar Sai Ram</div>
+        <div class="rev-who">Sai Charan</div>
         <div class="rev-when">Engagement Decoration</div>
       </div>
       <div class="rev-dots">
